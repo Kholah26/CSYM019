@@ -1,0 +1,29 @@
+{"$schema": "http://json-schema.org/draft-04/schema#",
+"title":"Sightings report",
+"description":"A report of rare animal sightings in Exland",
+"type":"Object",
+"properties":{
+  "sightings":{
+    "type":"array",
+    "items":{
+      "type":"object",
+      "properties" : {
+					"id": { "type": "number", "minimum": 0.00 },
+					"animal": { "type" : "string", "enum": ["Hare", "Lion"] },
+					"number": { "type" : "number", "minimum": 0.00 },
+					"location": { "type" : "string", "enum": ["LHub", "LibRoof"] },
+					"date": { "type" : "string" },
+					"time": { "type" : "string" },
+					"observor": {
+						"type": "object",
+						"properties": {
+						    "name": { "type" : "string"},
+						    "email": { "type" : "string"}
+						}
+					},
+					"observations": { "type" : "string" }
+				}
+    }
+  }
+}
+}
